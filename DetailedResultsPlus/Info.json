@@ -1,0 +1,10 @@
+{
+  "Id": "DetailedResultsPlus",
+  "DisplayName": "DetailedResultsPlus",
+  "Author": "Taewon-IM",
+  "Version": "1.0.0",
+  "Requirements": [],
+  "AssemblyName": "DetailedResultsPlus.dll",
+  "EntryMethod": "DetailedResultsPlus.Main.Load",
+  "Repository": "https://raw.githubusercontent.com/Taewon-IM/DetailedResultsPlus/refs/heads/master/Repository.json"
+}
