@@ -13,7 +13,7 @@ namespace DetailedResultsPlus
         {
             { "speed", ("Speed", "배속", "倍速") },
             { "avgOffset", ("Avg Offset", "평균 오프셋", "平均偏移") },
-            { "completed", ("% Complete", "% 완료", "% 完成度") }
+            { "completed", ("% Complete", "% 완료", "% 完成") }
         };
 
         public static string Get(string key)
