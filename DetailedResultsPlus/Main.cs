@@ -9,21 +9,23 @@ namespace DetailedResultsPlus
 {
     public static class Localization
     {
-        private static Dictionary<string, (string en, string ko)> _texts = new Dictionary<string, (string, string)>
+        private static Dictionary<string, (string en, string ko, string zh_cn)> _texts = new Dictionary<string, (string, string, string)>
         {
-            { "speed", ("Speed", "배속") },
-            { "avgOffset", ("Avg Offset", "평균 오프셋") },
-            { "completed", ("% Complete", "% 완료") }
+            { "speed", ("Speed", "배속", "倍速") },
+            { "avgOffset", ("Avg Offset", "평균 오프셋", "平均偏移") },
+            { "completed", ("% Complete", "% 완료", "% 完成度") }
         };
 
         public static string Get(string key)
         {
             string lang = RDString.language.ToString().ToLower();
             bool isKorean = (lang == "korean");
+            bool isChinese = (lang == "chinese");
+            bool isChineseSimplified = (lang == "chinesesimplified");
 
             if (_texts.TryGetValue(key, out var text))
             {
-                return isKorean ? text.ko : text.en;
+                return isChinese || isChineseSimplified ? text.zh_cn : isKorean ? text.ko : text.en;
             }
 
             return "Key Error";
